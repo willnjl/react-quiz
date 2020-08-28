@@ -13,11 +13,11 @@ export default class CountBy extends Component {
   handleClick() {
     const { step } = this.props;
     this.setState({
-      count: this.state.count + step,
+      count: this.state.count + +step,
     });
   }
   render() {
-    const style = {};
+    const style = { background: "#DDD", border: "10px dotted green" };
     return (
       <div style={style} onClick={this.handleClick}>
         <h3>Count Step</h3>
@@ -26,3 +26,7 @@ export default class CountBy extends Component {
     );
   }
 }
+
+CountBy.defaultProps = {
+  count: 5,
+};

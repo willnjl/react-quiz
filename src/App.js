@@ -29,6 +29,15 @@ function App() {
       <Route exact path="/even-clicks">
         <EvenClicks />
       </Route>
+      <Route exact path="HideMe">
+        <HideMe>
+          HIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDE HIDE
+        </HideMe>
+      </Route>
+      <Route
+        path="/count-by/:step"
+        render={({ match }) => <CountBy step={match.params.step} />}
+      />
     </Router>
   );
 }
