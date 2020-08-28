@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import Multiplier from "./components/Multiplier";
 import MultiplierProps from "./components/MultiplierProps";
+import EvenClicks from "./components/EvenClicks";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <h3> Multiplier</h3>
       {/* <Multiplier /> */}
       <MultiplierProps x={5} y={7} />
+      <EvenClicks />
     </div>
   );
 }
