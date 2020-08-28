@@ -18,6 +18,7 @@ export default class MinimumLength extends Component {
   }
   render() {
     const { length } = this.state;
+    const { min } = this.props;
     return (
       <form className="form-group">
         <h3>MinimumLength</h3>
@@ -27,12 +28,18 @@ export default class MinimumLength extends Component {
           onChange={(e) => this.handleChange(e)}
         />
         <div
-          className={"alert alert-" + (length >= 30 ? "success" : "warning")}
+          className={"alert alert-" + (length >= min ? "success" : "warning")}
         >
-          <p class="lead">{length >= 30 ? "nice" : "Too short!"}</p>
-          <p>{length}/30</p>
+          <p class="lead">{length >= min ? "nice" : "Too short!"}</p>
+          <p>
+            {length}/{min}
+          </p>
         </div>
       </form>
     );
   }
 }
+
+MinimumLength.defaultProps = {
+  min: 30,
+};

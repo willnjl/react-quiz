@@ -17,7 +17,6 @@ function App() {
           <h3> Multiplier</h3>
           {/* <Multiplier /> */}
           <MultiplierProps x={5} y={7} />
-          <MultiplierProps x={5} y={7} />
           <EvenClicks />
           <CountBy step={5} />
           <HideMe>
@@ -37,6 +36,10 @@ function App() {
       <Route
         path="/count-by/:step"
         render={({ match }) => <CountBy step={match.params.step} />}
+      />
+      <Route
+        path="/minimum/:min"
+        render={({ match }) => <MinimumLength min={match.params.min} />}
       />
     </Router>
   );
