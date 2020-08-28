@@ -6,6 +6,7 @@ import MultiplierProps from "./components/MultiplierProps";
 import EvenClicks from "./components/EvenClicks";
 import CountBy from "./components/CountBy";
 import HideMe from "./components/HideMe";
+import MinimumLength from "./components/MinimumLength";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <HideMe>
         HIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDE HIDE
       </HideMe>
+      <MinimumLength />
     </div>
   );
 }
