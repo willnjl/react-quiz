@@ -5,6 +5,7 @@ import Multiplier from "./components/Multiplier";
 import MultiplierProps from "./components/MultiplierProps";
 import EvenClicks from "./components/EvenClicks";
 import CountBy from "./components/CountBy";
+import HideMe from "./components/HideMe";
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
       {/* <Multiplier /> */}
       <MultiplierProps x={5} y={7} />
       <EvenClicks />
-
       <CountBy step={5} />
+      <HideMe>
+        HIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDE HIDE
+      </HideMe>
     </div>
   );
 }
