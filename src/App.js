@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.css";
 import Multiplier from "./components/Multiplier";
@@ -10,17 +11,25 @@ import MinimumLength from "./components/MinimumLength";
 
 function App() {
   return (
-    <div className="App">
-      <h3> Multiplier</h3>
-      {/* <Multiplier /> */}
-      <MultiplierProps x={5} y={7} />
-      <EvenClicks />
-      <CountBy step={5} />
-      <HideMe>
-        HIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDE HIDE
-      </HideMe>
-      <MinimumLength />
-    </div>
+    <Router>
+      <Route exact path="/">
+        <div className="App">
+          <h3> Multiplier</h3>
+          {/* <Multiplier /> */}
+          <MultiplierProps x={5} y={7} />
+          <MultiplierProps x={5} y={7} />
+          <EvenClicks />
+          <CountBy step={5} />
+          <HideMe>
+            HIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDEHIDE HIDE
+          </HideMe>
+          <MinimumLength />
+        </div>
+      </Route>
+      <Route exact path="/even-clicks">
+        <EvenClicks />
+      </Route>
+    </Router>
   );
 }
 

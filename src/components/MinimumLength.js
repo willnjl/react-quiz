@@ -29,8 +29,8 @@ export default class MinimumLength extends Component {
         <div
           className={"alert alert-" + (length >= 30 ? "success" : "warning")}
         >
-          <p>{length}/30</p>
           <p class="lead">{length >= 30 ? "nice" : "Too short!"}</p>
+          <p>{length}/30</p>
         </div>
       </form>
     );
