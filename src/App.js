@@ -38,8 +38,15 @@ function App() {
         render={({ match }) => <CountBy step={match.params.step} />}
       />
       <Route
+        exact
         path="/minimum/:min"
         render={({ match }) => <MinimumLength min={match.params.min} />}
+      />
+      <Route
+        path="/multiplier/:x/:y"
+        render={({ match }) => (
+          <MultiplierProps x={match.params.x} y={match.params.y} />
+        )}
       />
     </Router>
   );
